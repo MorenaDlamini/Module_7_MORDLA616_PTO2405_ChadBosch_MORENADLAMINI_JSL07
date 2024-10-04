@@ -1,5 +1,5 @@
 body {
-    font-family: 'Raleway', serif;
+  font-family: 'Raleway', serif;
   text-align: center;
   background-color: #f0f0f0;
   margin: 0;
@@ -17,15 +17,26 @@ h1 {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center-align the form content */
 }
 
-label,
-input {
+label {
   display: block;
   margin-bottom: 10px;
+  text-align: center; /* Center the label text */
+}
+
+input {
+  display: block;
+  width: 100%; /* Full width input field */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: center; /* Center the text inside the input fields */
 }
 
 button {
+  width: 100%; /* Full width button */
   background-color: #0074e4;
   color: #fff;
   border: none;
@@ -33,38 +44,41 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 button:hover {
   background-color: #0056a7;
 }
 
-/* Certificate Modal */
-
+/* Modal Styles */
 .modal {
-    max-width: 800px;
-    margin: 0 auto; /* Center horizontally */
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-    z-index: 1;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    border: 3px solid #659f8f;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 3px solid #659f8f;
+}
 
 .modal-content::before {
   content: "";
   position: absolute;
-  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
   z-index: -1;
   background: linear-gradient(#659f8f, #5d5f5e);
   border-radius: 15px;
@@ -73,7 +87,10 @@ button:hover {
 .modal-content::after {
   content: "";
   position: absolute;
-  top: -1px; right: -1px; bottom: -1px; left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   z-index: -2;
   background: #fff;
   border: 1px solid #dc7f5f;
@@ -88,6 +105,7 @@ button:hover {
   border: 2px solid #dc7f5f;
   border-radius: 10px;
   margin: 20px 0;
+  text-align: center; /* Center the certificate content */
 }
 
 h1, .modal-content h2, .modal-content p {
@@ -95,12 +113,12 @@ h1, .modal-content h2, .modal-content p {
 }
 
 .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
   color: #dc7f5f;
-}
-
-/* Adding a fancy border to the certificate content */
-#certificateContent {
-  background: #f9f9f9 url('path/to/your/decorative-border-image.png') center/contain no-repeat;
+  font-size: 20px;
 }
 
 /* Adjust button styles to fit the theme */
@@ -112,4 +130,3 @@ button {
 button:hover {
   background-color: #5d5f5e;
 }
-
